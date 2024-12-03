@@ -2,6 +2,7 @@
   "name": "theme-vdoing-blog",
   "version": "1.0.0",
   "scripts": {
+    "editFm": "node utils/editFrontmatter.js",
     "dev": "export NODE_OPTIONS=--openssl-legacy-provider && node --max_old_space_size=4096 ./node_modules/vuepress/cli.js dev docs",
     "build": "export NODE_OPTIONS=--openssl-legacy-provider && node --max_old_space_size=4096 ./node_modules/vuepress/cli.js build docs",
     "dev:win": "set NODE_OPTIONS=--openssl-legacy-provider && node --max_old_space_size=4096 ./node_modules/vuepress/cli.js dev docs",
@@ -9,7 +10,6 @@
     "predev": "node utils/check.js dev && vdoing",
     "prebuild": "node utils/check.js build && vdoing",
     "deploy": "bash deploy.sh",
-    "editFm": "node utils/editFrontmatter.js",
     "baiduPush": "node utils/baiduPush.js www.zhangtq.com && bash baiduPush.sh",
     "publish": "cd ./vdoing && npm publish && cd .. && yarn updateTheme",
     "updateTheme": "yarn remove vuepress-theme-vdoing && rm -rf node_modules && yarn && yarn add vuepress-theme-vdoing -D"
@@ -35,6 +35,7 @@
   "dependencies": {
     "idna": "^0.0.1",
     "punycode": "^2.3.1",
-    "vue-router": "^3.4.5"
+    "vue-router": "^3.4.5",
+    "vuepress-plugin-editfrontmatter": "^1.1.0"
   }
 }

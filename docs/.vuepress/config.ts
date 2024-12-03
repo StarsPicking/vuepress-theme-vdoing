@@ -123,6 +123,13 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           ],
         },
         {
+          text: 'Linux',
+          items:[
+            { text: 'Linux基础', link: '/pages/30f776/' },
+            { text: 'Linux高级', link: '/pages/9d2948/' },
+          ]
+        },
+        {
           text: '其他',
           items:[
             {text: 'istio', link: '/pages/41c413/'},
@@ -133,52 +140,40 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           ]
         },
         ],
-      },
-      { 
-        text: 'Linux', 
-        link: '/linux/',
-        items: [
-          { text: 'Linux基础', link: '/pages/30f776/' },
-          { text: 'Linux高级', link: '/pages/9d2948/' },
-          // { text: '', link: '/pages/erfd3ua478932/' },
-          // { text: '实用技巧', link: '/pages/fdsf3ica4ej/' },
-        ], 
-      },
-    {
-      text: '算法',
-      link: '/algorithm/',
-      items: [
-
-        { text: '基础', 
-            link: '/theory/',
-            items: [
-              {text: '数据结构与算法基础', link: '/structure/'},
-            ]},
-        { text: 'Leetcode题目', 
-            link: '/leetcode/',
-            items: [
-              { text: 'leetcode算法题', link: '/problem-1/' },
-              { text: 'leetcode算法题分类', link: '/pages/971197/' },
-            ]},
-      ],
-    },      
+      },      
       {
         text: '面试',
         link: '/interview/',
         items: [
-          { text: 'python', link: '/interview/python/' },
-          { text: 'golang', link: '/interview/golang/' },
-          { text: 'mysql', link: '/interview/mysql/' },
-          { text: 'redis', link: '/interview/redis/' },
-          { text: 'nginx', link: '/interview/nginx/' },
-          { text: '微服务', link: '/interview/microservice/' },
-          { text: 'devops', link: '/interview/devops/' },
-          { text: '算法', link: '/interview/algorithm/' },
-          { text: 'http', link: '/interview/http/' },
-          {text: "正则表达式", link: '/interview/regex/'}
-          // { text: '算法基础', link: '/algorithm/pages/1eb39a/' },
-          // { text: '面试常见题',  link:'/algorithm/pages/d6c986/'},
-          // { text: '面试题分类',  link:'/algorithm/pages/45f3905623eoup/'},
+          {
+            text: '算法导论',
+            items:[
+              {text: '数据结构与算法基础', link: '/throry/structure/'},
+            ],
+          },
+          {
+            text: 'Leetcode题目',
+            items: [
+              { text: 'leetcode算法题I', link: '/leetcode/problem-1/' },
+              { text: 'leetcode算法题II', link: '/leetcode/problem-2/'},
+              { text: 'leetcode算法题分类', link: '/leetcode/971197/' },
+            ]
+          },
+          {
+            text: '高频题',
+            items:[
+              { text: 'python', link: '/interview/python/' },
+              { text: 'golang', link: '/interview/golang/' },
+              { text: 'mysql', link: '/interview/mysql/' },
+              { text: 'redis', link: '/interview/redis/' },
+              { text: 'nginx', link: '/interview/nginx/' },
+              { text: '微服务', link: '/interview/microservice/' },
+              { text: 'devops', link: '/interview/devops/' },
+              { text: '算法', link: '/interview/algorithm/' },
+              { text: 'http', link: '/interview/http/' },
+              {text: "正则表达式", link: '/interview/regex/'},
+            ],
+          }
         ],
       },
       {
@@ -211,26 +206,26 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           ]},
         ],
       },
-      // {
-      //   text: '索引',
-      //   link: '/archives/',
-      //   items: [
-      //     { text: '分类', link: '/categories/' },
-      //     { text: '标签', link: '/tags/' },
-      //     { text: '归档', link: '/archives/' },
-      //   ],
-      // },
+      {
+        text: '索引',
+        link: '/archives/',
+        items: [
+          { text: '分类', link: '/categories/' },
+          { text: '标签', link: '/tags/' },
+          { text: '归档', link: '/archives/' },
+        ],
+      },
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/favicon1.png', // 导航栏logo
     // logo: 'https://zhangtq-blog.oss-cn-hangzhou.aliyuncs.com/content_picture/logo.png', // 导航栏logo
-    // repo: 'https://gitee.com/zhangtqup/vuepress_blog.git', // 导航栏右侧生成Github链接
+    //repo: 'https://gitee.com/zhangtqup/blog', // 导航栏右侧生成Github链接
     // // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
     // // "GitHub"/"GitLab"/"Bitbucket" 其中之一，或是 "Source"。
-    // repoLabel: 'gitee',
+    //repoLabel: 'GitHub',
     searchMaxSuggestions: 10, // 搜索结果显示最大数
     lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
-    docsRepo: 'https://gitee.com/zhangtqup/vuepress_blog',
+    docsRepo: 'https://gitee.com/zhangtqup/blog',
     docsDir: 'docs', // 编辑的文件夹
     // docsBranch: 'master', // 编辑的文件所在分支，默认master。 注意：如果你的分支是main则修改为main
     editLinks: true, // 启用编辑
@@ -275,7 +270,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // 文章默认的作者信息，(可在md文件中单独配置此信息) string | {name: string, link?: string}
     author: {
       name: 'zhangtq', // 必需
-      link: 'https://gitee.com/better_better', // 可选的
+      link: 'https://gitee.com/zhangtqup', // 可选的
     },
 
     //博主信息 (显示在首页侧边栏)
@@ -453,7 +448,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       '@vuepress/last-updated', // "上次更新"时间格式
       {
         transformer: (timestamp, lang) => {
-          return dayjs(timestamp).format('YYYY/MM/DD, HH:mm:ss')
+          return dayjs(timestamp).format('YYYY/MM/DD HH:mm:ss')
         },
       },
     ]
