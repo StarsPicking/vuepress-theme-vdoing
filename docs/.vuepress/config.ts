@@ -2,12 +2,12 @@
 /**
  * 提示：如您想使用JS版本的配置文件可参考：https://github.com/xugaoyi/vuepress-theme-vdoing/tree/a2f03e993dd2f2a3afdc57cf72adfc6f1b6b0c32/docs/.vuepress
  */
-import { resolve } from 'path'
+// import { resolve } from 'path'
 import { defineConfig4CustomTheme, UserPlugins } from 'vuepress/config'
 import { VdoingThemeConfig } from 'vuepress-theme-vdoing/types'
 import dayjs from 'dayjs'
 import baiduCode from './config/baiduCode' // 百度统计hm码
-import htmlModules from './config/htmlModules' // 自定义插入的html块
+// import htmlModules from './config/htmlModules' // 自定义插入的html块
 // import remarkGithubAdmonitionsToDirectives from "remark-github-admonitions-to-directives";
 
 
@@ -36,68 +36,35 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // 导航配置
     nav: [
       { text: '首页', link: '/' },
-      // {
-      //   text: 'Python',
-      //   link: '/python/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
-      //   items: [
-      //     // 说明：以下所有link的值只是在相应md文件头部定义的永久链接（不是什么特殊编码）。另外，注意结尾是有斜杠的
-      //     {
-      //       text: '',
-      //       items: [
-      //         { text: 'JavaScript', link: '/pages/8143cc480faf9a11/' },
-      //       ],
-      //     },
-      //     {
-      //       text: '学习笔记',
-      //       items: [
-      //         { text: '《JavaScript教程》', link: '/note/javascript/' },
-      //         { text: '《JavaScript高级程序设计》', link: '/note/js/' },
-      //         { text: '《ES6 教程》', link: '/note/es6/' },
-      //         { text: '《Vue》', link: '/note/vue/' },
-      //         { text: '《React》', link: '/note/react/' },
-      //         {
-      //           text: '《TypeScript 从零实现 axios》',
-      //           link: '/note/typescript-axios/',
-      //         },
-      //         {
-      //           text: '《Git》', 
-      //           link: '/note/git/',
-      //         },
-      //         {
-      //           text: 'TypeScript',
-      //           link: '/pages/51afd6/',
-      //         },
-      //         {
-      //           text: 'JS设计模式总结',
-      //           link: '/pages/4643cd/',
-      //         },
-      //       ],
-      //     },
-      //   ],
-      // },
-      {
-        text: 'Python',
-        link: '/python/',
-        items: [
-          { text: 'Python基础', link: '/pages/ff0317/' },
-          { text: 'Python模块', link: '/pages/9b5755/' },
-          { text: 'Django', link: '/pages/1df8bf/' },
-          { text: 'Celery', link: '/pages/142050/' },
-          { text: 'Flask', link: '/pages/d3e8d0/' },
-          { text: 'Tornado', link: '/pages/bbf8e1/' },
-
-        ],
-      },
-      {
-        text: 'Golang',
-        link: '/golang/',
-        items: [
-          { text: 'Go基础', link: '/pages/a8f4bd/' },
-          { text: 'Go标准库', link: '/pages/91a40b/' },
-          { text: 'Web开发', link: '/pages/1d79a6/' },
-          { text: '微服务', link: '/pages/1d79a6/' },
-          { text: '常用组件', link: '/pages/883e4b/' },
-          { text: '数据库相关', link: '/pages/87cc75/' },
+      { 
+        text: '后端', 
+        link: '/backend/',
+        items:[
+          {
+            text: 'python教程',
+            link: '/python/',
+            items:[
+              { text: '基础', link: '/pages/ff0317/' },
+              { text: '模块', link: '/pages/9b5755/' },
+              { text: 'Django', link: '/pages/1df8bf/' },
+              { text: 'Celery', link: '/pages/142050/' },
+              { text: 'Flask', link: '/pages/d3e8d0/' },
+              { text: 'Tornado', link: '/pages/bbf8e1/' },
+            ],
+          },
+          {
+            text: 'golang教程',
+            link: '/golang/',
+            items:[
+              { text: '基础', link: '/pages/a8f4bd/' },
+              { text: '标准库', link: '/pages/91a40b/' },
+              { text: 'Web开发', link: '/pages/974921/' },
+              { text: '微服务', link: '/pages/1d79a6/' },
+              { text: '常用组件', link: '/pages/883e4b/' },
+              { text: '数据库相关', link: '/pages/87cc75/' },
+            ],
+          
+          },
         ],
       },
       {
@@ -112,9 +79,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
               {text:'jenkins', link:'/pages/f8aa3b/'},
               {text:'harbor', link:'/pages/0bb88e/'},
               {text:'kubernetes', link:'/pages/791cf5/'},
-              
-              {text:'', link:''},
-              {text:'', link:''},
             ],
           },
 
@@ -282,12 +246,12 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // pageStyle: 'line', // 页面风格，可选值：'card'卡片 | 'line' 线（未设置bodyBgImg时才生效）， 默认'card'。 说明：card时背景显示灰色衬托出卡片样式，line时背景显示纯色，并且部分模块带线条边框
 
      bodyBgImg: [
-      '/img/bannerBg.png',
+      '/img/bannerBg2.png',
       // 'https://zhangtq-blog.oss-cn-hangzhou.aliyuncs.com/content_picture/image-20241126212334797.png',
     ], // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时隔bodyBgImgInterval切换一张。
-    bodyBgImgOpacity: 0.9, // body背景图透明度，选值 0.1~1.0, 默认0.5
+    bodyBgImgOpacity: 1, // body背景图透明度，选值 0.1~1.0, 默认0.5
     // bodyBgImgInterval: 15, // body多张背景图时的切换间隔, 默认15，单位s
-    // titleBadge: false, // 文章标题前的图标是否显示，默认true
+    titleBadge: false, // 文章标题前的图标是否显示，默认true
     // titleBadgeIcons: [ // 文章标题前图标的地址，默认主题内置图标
     //   '图标地址1',
     //   '图标地址2'
@@ -306,7 +270,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     defaultMode: 'dark',
 
     // 侧边栏  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | <自定义>    温馨提示：目录页数据依赖于结构化的侧边栏数据，如果你不设置为'structuring',将无法使用目录页
-    sidebar: { mode: 'structuring', collapsable: true},
+    sidebar: { mode: 'structuring', collapsable: false},
 
     // 文章默认的作者信息，(可在md文件中单独配置此信息) string | {name: string, link?: string}
     author: {
@@ -382,17 +346,17 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     //     src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
     //   },
     // ], // 网站关联Google AdSense 与 html格式广告支持（你可以去掉）
-    [
-      'script',
-      {},
-      `var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?43f3ba02341bd2907618a02b6fb4e9c5";
-        var s = document.getElementsByTagName("script")[0]; 
-        s.parentNode.insertBefore(hm, s);
-})();`,
-    ],
+//     [
+//       'script',
+//       {},
+//       `var _hmt = _hmt || [];
+//       (function() {
+//         var hm = document.createElement("script");
+//         hm.src = "https://hm.baidu.com/hm.js?43f3ba02341bd2907618a02b6fb4e9c5";
+//         var s = document.getElementsByTagName("script")[0]; 
+//         s.parentNode.insertBefore(hm, s);
+// })();`,
+//     ],
   ],
 
 
@@ -454,20 +418,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         copyMessage: '复制成功', // default is 'Copy successfully and then paste it for use.'
         duration: 1000, // prompt message display time.
         showInMobile: false, // whether to display on the mobile side, default: false.
-      },
-    ],
-
-    [
-      'demo-block', // demo演示模块 https://github.com/xiguaxigua/vuepress-plugin-demo-block
-      {
-        settings: {
-          // jsLib: ['http://xxx'], // 在线示例(jsfiddle, codepen)中的js依赖
-          // cssLib: ['http://xxx'], // 在线示例中的css依赖
-          // vue: 'https://fastly.jsdelivr.net/npm/vue/dist/vue.min.js', // 在线示例中的vue依赖
-          jsfiddle: false, // 是否显示 jsfiddle 链接
-          codepen: true, // 是否显示 codepen 链接
-          horizontal: false, // 是否展示为横向样式
-        },
       },
     ],
     [
