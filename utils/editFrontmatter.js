@@ -55,7 +55,6 @@ async function main() {
     let dataStr = fs.readFileSync(file.filePath, 'utf8');// 读取每个md文件的内容
     const fileMatterObj = matter(dataStr) // 解析md文件的front Matter。 fileMatterObj => {content:'剔除frontmatter后的文件内容字符串', data:{<frontmatter对象>}, ...}
     let matterData = fileMatterObj.data; // 得到md文件的front Matter
-    
     let mark = false
     // 删除操作
     if (config.delete) {

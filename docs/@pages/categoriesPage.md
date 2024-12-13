@@ -5,8 +5,8 @@ permalink: /categories/
 article: false
 top: false
 toc: true
-sidebar: false
 author: 
   name: ztq
   link: https://github.com/zhangtqup
+layout: ztq
 ---

@@ -424,6 +424,29 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         },
       },
     ],
+    //订阅 vuepress-plugin-feed
+    [ 
+      'feed', 
+      {
+        canonical_base: WEB_SITE,
+        count: 5000,
+        content: true,
+        feed_options: {
+          title: "摘星's Blog",
+          description: "This is my personal feed!",
+          // generator: 'awesome',
+          author: {
+            name: "zhangtq",
+            email: "1028354023@qq.com",
+            link: "https://www.zhangtq.com"
+          }
+        },
+      
+      }
+    ],
+
+
+    // 评论
     // [
     //   'vuepress-plugin-comment', // 评论
     //   {
@@ -451,8 +474,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           return dayjs(timestamp).format('YYYY/MM/DD HH:mm:ss')
         },
       },
-    ]
-
+    ],
   ],
 
   markdown: {

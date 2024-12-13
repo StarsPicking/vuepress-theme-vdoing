@@ -4,21 +4,23 @@ home: true
 heroText: 摘星
 tagline: 手握日月摘星辰，时间无我这般人
 actionText: 立刻进入 →
-actionLink: /python/
+actionLink: /backend/
 bannerBg: none # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
+title: '摘星'
 features: # 可选的
-  - title: Python
-    details: python基础、web框架、组件
-    link: /python/ # 可选
-    imgUrl: /img/python.png # 可选
-  - title: Golang
-    details: golang基础、后端框架、微服务
-    link: /golang/
-    imgUrl: /img/golang.png
+  - title: 后端
+    details: python、golang、后端框架
+    link: /backend/ # 可选
+    imgUrl: /img/web.png # 可选
   - title: Devops
     details: 持续集成、发布、部署、流程自动化
     link: /devops/
-    imgUrl: /img/other.png
+    imgUrl: /img/ui.png
+  - title: 技术栈
+    details: 数据库、nginx、网络协议
+    link: /stack/
+    imgUrl: /img/more.png
+
 
 # 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
 # postList: simple

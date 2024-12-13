@@ -24,8 +24,10 @@
     "vuepress-plugin-baidu-tongji": "^1.0.1",
     "vuepress-plugin-comment": "^0.7.3",
     "vuepress-plugin-demo-block": "^0.7.2",
+    "vuepress-plugin-feed": "^0.1.9",
     "vuepress-plugin-fulltext-search": "^2.2.1",
     "vuepress-plugin-one-click-copy": "^1.0.2",
+    "vuepress-plugin-rss-feed": "^1.0.2",
     "vuepress-plugin-sitemap": "^2.3.1",
     "vuepress-plugin-thirdparty-search": "^1.0.2",
     "vuepress-plugin-zooming": "^1.1.7",
@@ -36,6 +38,6 @@
     "idna": "^0.0.1",
     "punycode": "^2.3.1",
     "vue-router": "^3.4.5",
-    "vuepress-plugin-editfrontmatter": "^1.1.0"
+    "vuepress-plugin-rss": "^2.0.0"
   }
 }
