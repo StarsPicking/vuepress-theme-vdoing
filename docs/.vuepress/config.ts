@@ -270,7 +270,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // 文章默认的作者信息，(可在md文件中单独配置此信息) string | {name: string, link?: string}
     author: {
       name: 'zhangtq', // 必需
-      link: 'https://gitee.com/zhangtqup', // 可选的
+      link: 'https://www.cnblogs.com/zhangtq', // 可选的
     },
 
     //博主信息 (显示在首页侧边栏)
@@ -313,7 +313,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     extendFrontmatter: {
       author: {
         name: 'zhangtq',
-        link: 'https://gitee.com/zhangtqup'
+        link: 'https://www.cnblogs.com/zhangtq'
       }
     },
 
