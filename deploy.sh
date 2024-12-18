@@ -8,17 +8,17 @@ set -e
 #commit_info=`git describe --all --always --long`
 #push_addr=https://gitee.com/zhangtqup/blog.git
 #dist_path=docs/.vuepress/dist # 打包生成的文件夹路径
-dist_path=docs/.vuepress
+# dist_path=docs/.vuepress
 #push_branch=master # 推送的分支
 #push_name="张天庆"
 #push_email="15652533044@163.com"
 
 # 生成静态文件
-npm run build:win
+# npm run build:win
 
 # 进入生成的文件夹
-cd $dist_path
-echo $dist_path
+# cd $dist_path
+# echo $dist_path
 #上传至gitee
 #rm -rf .git
 #git init
@@ -34,12 +34,9 @@ echo $dist_path
 #git push -f origin $push_branch
 
 #上传至个人服务器
-#cd ../
-tar --exclude=dist/.git -zcvf dist.tar.gz dist/
 
 scp -P 22 -r dist.tar.gz root@www.zhangtq.com:/var/www/vuepress/
 ssh root@www.zhangtq.com -p 22 "cd /var/www/vuepress/ && tar -xvf dist.tar.gz && rm -f dist.tar.gz"
 rm -f dist.tar.gz && rm -rf dist/
-exit
-
-ssh zhangtianqing@www.zhangtq.com -p 22 "cd /home/zhangtianqing/vuepress-theme-vdoing && git pull gitee master && git merge github/master && git push github master"
+# 将代码同步更新到github
+ssh zhangtianqing@www.zhangtq.com -p 22 "cd /home/zhangtianqing/vuepress-theme-vdoing && git checkout master && git pull gitee master && git checkout main && git merge gitee/master && git push github main"
