@@ -219,13 +219,13 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/favicon1.png', // 导航栏logo
     // logo: 'https://zhangtq-blog.oss-cn-hangzhou.aliyuncs.com/content_picture/logo.png', // 导航栏logo
-    //repo: 'https://gitee.com/zhangtqup/blog', // 导航栏右侧生成Github链接
+    //repo: 'https://gitee.com/zhangtqup/vuepress_theme_vdoing.git', // 导航栏右侧生成Github链接
     // // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
     // // "GitHub"/"GitLab"/"Bitbucket" 其中之一，或是 "Source"。
     //repoLabel: 'GitHub',
     searchMaxSuggestions: 10, // 搜索结果显示最大数
     lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
-    docsRepo: 'https://gitee.com/zhangtqup/blog',
+    docsRepo: 'https://gitee.com/zhangtqup/vuepress_theme_vdoing.git',
     docsDir: 'docs', // 编辑的文件夹
     // docsBranch: 'master', // 编辑的文件所在分支，默认master。 注意：如果你的分支是main则修改为main
     editLinks: true, // 启用编辑
@@ -282,23 +282,33 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     // 社交图标 (显示于博主信息栏和页脚栏。内置图标：https://doc.xugaoyi.com/pages/a20ce8/#social)
     social: {
-      // iconfontCssFile: '//at.alicdn.com/t/xxx.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自己添加。阿里图片库：https://www.iconfont.cn/
+      iconfontCssFile: '//at.alicdn.com/t/c/font_3541184_lpy87v4dgzo.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自己添加。阿里图片库：https://www.iconfont.cn/
       icons: [
         {
           iconClass: 'icon-youjian',
           title: '发邮件',
-          link: 'mailto:15652533044@163.com',
+          link: 'mailto:ztq1028354023@163.com',
         },
         {
           iconClass: 'icon-github',
           title: 'GitHub',
-          link: 'https://github.com/DeepOcean299',
+          link: 'https://github.com/StarsPicking',
         },
         {
           iconClass: 'icon-gitee',
           title: '码云',
           link: 'https://gitee.com/zhangtqup',
         },
+        {
+          iconClass: 'icon-cnblogs',
+          title: '码云',
+          link: 'https://www.cnblogs.com/zhangtq',
+        },
+        {
+          iconClass: 'icon-rss',
+          title: 'rss订阅',
+          link: 'https://www.zhangtq.com/rss.xml',
+        }
       ],
     },
 
@@ -306,7 +316,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     footer: {
       createYear: 2019, // 博客创建年份
       copyrightInfo:
-        '张学友 | <a href="https://gitee.com/zhangtqup" target="_blank">MIT License</a></br> <a href="https://beian.miit.gov.cn" target="_blank">京ICP备2024070721号</a>', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
+        '张学友 | <a href="https://www.cnblogs.com/zhangtq" target="_blank">MIT License</a></br> <a href="https://beian.miit.gov.cn" target="_blank">京ICP备2024070721号</a>', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
     },
 
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）

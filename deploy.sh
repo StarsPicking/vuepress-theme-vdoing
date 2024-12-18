@@ -40,4 +40,6 @@ tar --exclude=dist/.git -zcvf dist.tar.gz dist/
 scp -P 22 -r dist.tar.gz root@www.zhangtq.com:/var/www/vuepress/
 ssh root@www.zhangtq.com -p 22 "cd /var/www/vuepress/ && tar -xvf dist.tar.gz && rm -f dist.tar.gz"
 rm -f dist.tar.gz && rm -rf dist/
+exit
 
+ssh zhangtianqing@www.zhangtq.com -p 22 "cd /home/zhangtianqing/vuepress-theme-vdoing && git pull gitee master && git merge github/master && git push github master"
